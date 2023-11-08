@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="criarperguntas.css">
+    <title>CRIAR PERGUNTAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="img/background-arquivos.mp4" type="video/mp4">
+    </video>
+
+
+    <div id="titulo">
+            <h1 id="titulo2">CRIE A PERGUNTA</h1>
+    </div>
+
+
+
+    <form id="formulario">
+        <label for="PERGUNTA" class="txt">ESCREVA A PERGUNTA:</label>
+        <input type="text" id="escreve-pergunta" >
+
+        <label for="respostaA" class="txt">ALTERNATIVA-A</label>
+        <input type="text" id="questao-a"  >
+
+        <label for="respostaB" class="txt">ALTERNATIVA-B</label>
+        <input type="text" id="questao-b" >
+
+        <label for="respostaC" class="txt">ALTERNATIVA-C</label>
+        <input type="text" id="questao-c"  >
+
+        <label for="respostaC" class="txt">ALTERNATIVA-D</label>
+        <input type="text" id="questao-d"  >
+
+        <label for="alternativa-correta" class="txt">ALTERNATIVA CORRETA:</label>
+        <select id="alternativa-crr" >
+
+            <option value="a-alter">A</option>
+            <option value="b-alter">B</option>
+            <option value="c-alter">C</option>
+            <option value="d-alter">D</option>
+        </select>
+
+
+        <button type="submit">Enviar</button>
+    </form>
+
+
+
+
+
+
+    <script src="criarperguntas.js"></script>
+</body>
+</html>

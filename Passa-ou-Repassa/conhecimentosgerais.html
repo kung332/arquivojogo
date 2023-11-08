@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passa ou Repassa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="conhecimentosgerais.css">
+
+</head>
+
+<body>
+
+    <!--colocar imagem da logo do nosso joguinho GAY-->
+
+    <video autoplay loop muted palys-inline class="back-video">
+        <source src="video/fundo roxo.mp4" type="video/mp4">
+
+    </video>
+
+    
+
+    <div class="container">
+
+
+
+        <div class="div-1">
+            <div class="score-box">
+                <span class="score1">0</span>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" class="custom-checkbox" id="checkbox2">
+                <label class="round-checkbox-label" for="checkbox2"></label>
+            </div>
+            <span class="label-text">    </span>
+            <input type="text" id="texto-editavel-1" value="">
+
+        </div>
+
+        
+
+        <div class="div-2">
+
+            <div id="logojogo">
+                <h1 id="texto">STORMY COMBAT</h1>
+    
+            </div>
+
+            <div id="container1">
+                <div id="countdown">03:00</div>
+                <button class="button" id="startButton">Iniciar</button>
+                <button class="button" id="stopButton">Parar</button>
+            </div>
+        
+            <script>
+                let timer;
+                let secondsRemaining = 180; // 3 minutos em segundos
+                const countdownDisplay = document.getElementById("countdown");
+                const startButton = document.getElementById("startButton");
+                const stopButton = document.getElementById("stopButton");
+        
+                function startCountdown() {
+                    timer = setInterval(function () {
+                        if (secondsRemaining <= 0) {
+                            clearInterval(timer);
+                        } else {
+                            secondsRemaining--;
+                            updateDisplay();
+                        }
+                    }, 1000);
+                }
+        
+                function stopCountdown() {
+                    clearInterval(timer);
+                }
+        
+                function updateDisplay() {
+                    const minutes = Math.floor(secondsRemaining / 60);
+                    const seconds = secondsRemaining % 60;
+                    countdownDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+                }
+        
+                startButton.addEventListener("click", startCountdown);
+                stopButton.addEventListener("click", stopCountdown);
+        
+                updateDisplay();
+            </script>
+
+           
+
+                <div class="question" id="question">Qual é a capital da França?</div>
+                <div class="answers" id="answers">
+                         <div class="answer" onclick="checkAnswer(this, 1, 'score', 'checkbox1')">Paris</div>
+                         <div class="answer" onclick="checkAnswer(this, 2, 'score2', 'checkbox2')">Londres</div>
+                         <div class="answer" onclick="checkAnswer(this, 3, 'score1', 'checkbox1')">Berlim</div>
+                         <div class="answer" onclick="checkAnswer(this, 4, 'score2', 'checkbox2')">Madrid</div>
+                </div>
+
+
+            <div class="voltar-seguir">
+                    <button id="um" >
+                        &#8606; 
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+
+                    <button id="tres">
+                        REVELAR
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>        
+
+
+                    <button id="dois">
+                        &#8608;
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+             </div>          
+                  
+            
+                 
+            
+        
+
+        </div>
+           
+
+
+    
+
+
+        <div class="div-3">
+            <div class="score-box">
+                <span class="score1">0</span>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" class="custom-checkbox" id="checkbox1">
+                <label class="round-checkbox-label" for="checkbox1"></label>
+            </div>
+            <span class="label-text">      </span>
+            <input type="text" id="texto-editavel-2" value="">
+
+
+            <div class="container-botao">
+
+                <div class="card">
+               
+                <div id="btn">
+                    <a href="" id="linka">+P</a>
+        
+                </div>
+        
+                <div class="btn2">
+                    <a href="" class="linkb">RESET</a>
+        
+                </div>
+        
+                <div class="btn3">
+                    <a href="" class="linkc">CATATAL</a>
+        
+                </div>
+            </div>
+            
+        </div>
+
+       
+
+    </div>
+
+
+     <script src="jogo.js"></script>
+    </body>
+     
+</html>

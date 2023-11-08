@@ -1,0 +1,5 @@
+qual a idade do professor?, 21, 23, 156, 48, d
+qual a idade do professor?, 21, 23, 156, 48, d
+qual a idade do professor?, 21, 23, 156, 48, d
+qual a idade do professor?, f, 23, g, s, b
+qual a pessoa mais legal da sala?, raquel, rachel, kekel, kekeldakebrada, a
